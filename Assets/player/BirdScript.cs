@@ -8,10 +8,7 @@ public class BirdScript : MonoBehaviour
     private Rigidbody2D birdBody;
     [SerializeField]
     private CircleCollider2D birdBox;
-    [SerializeField]
-    private float flapStrenght;
     [SerializeField] private float torqueAmount = 5;
-    private bool dead;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,18 +19,6 @@ public class BirdScript : MonoBehaviour
     void OnDestroy()
     {
         GameOver.on -= handleGameOver;
-    }
-
-    public void onFlap(InputAction.CallbackContext context)
-    {
-        if (dead)
-        {
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            birdBody.linearVelocity = Vector2.up * flapStrenght;
-        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

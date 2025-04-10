@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6890365085857651852}
   - component: {fileID: 3150513815989058622}
   - component: {fileID: 4121834066251932008}
+  - component: {fileID: -9052358859445618004}
   - component: {fileID: 4725094008007713746}
   m_Layer: 3
   m_Name: Bird
@@ -152,8 +153,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.08, y: -0.58}
-  m_Radius: 1.88
+  m_Offset: {x: -0.08, y: -0.46}
+  m_Radius: 2.1
 --- !u!114 &4121834066251932008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,8 +169,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdBody: {fileID: 6890365085857651852}
   birdBox: {fileID: 3150513815989058622}
-  flapStrenght: 20
   torqueAmount: 25
+--- !u!114 &-9052358859445618004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3108424159454191032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6abb6f708e84f45bad5491ff665e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flapStrength: 20
+  playerBody: {fileID: 6890365085857651852}
 --- !u!114 &4725094008007713746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +211,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4121834066251932008}
-        m_TargetAssemblyTypeName: BirdScript, Assembly-CSharp
+      - m_Target: {fileID: -9052358859445618004}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: onFlap
         m_Mode: 0
         m_Arguments:
@@ -211,6 +225,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0c948128-946c-4756-ab8e-f93e0f340c71
     m_ActionName: 'PlayerControls/flap[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 066c54b3-4b5c-4c78-9148-93de947e415d
+    m_ActionName: PlayerControls/test
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: PlayerControls
