@@ -6,13 +6,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text eggsCollectedText;
     private void Start()
     {
-        UI.onEggsCollectedChanged += UpdateEggsUI;
+        EggCollected.on += UpdateEggsUI;
         UpdateEggsUI();
     }
 
     private void OnDestroy()
     {
-        UI.onEggsCollectedChanged -= UpdateEggsUI;
+        EggCollected.on -= UpdateEggsUI;
     }
 
     private void UpdateEggsUI()

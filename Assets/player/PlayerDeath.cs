@@ -1,13 +1,10 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class BirdScript : MonoBehaviour
+public class PlayerDeath : MonoBehaviour
 {
 
-    [SerializeField]
-    private Rigidbody2D birdBody;
-    [SerializeField]
-    private CircleCollider2D birdBox;
+    [SerializeField] private Rigidbody2D birdBody;
+    [SerializeField] private CircleCollider2D birdBox;
     [SerializeField] private float torqueAmount = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,7 +26,6 @@ public class BirdScript : MonoBehaviour
 
     public void handleGameOver()
     {
-        dead = true;
         birdBox.enabled = false;
     }
 }

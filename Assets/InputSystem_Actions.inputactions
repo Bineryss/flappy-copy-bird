@@ -13,15 +13,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "test",
-                    "type": "Button",
-                    "id": "066c54b3-4b5c-4c78-9148-93de947e415d",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -44,17 +35,6 @@
                     "processors": "",
                     "groups": ";Touch",
                     "action": "flap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "76f48f00-ecdb-4229-b1c5-f0726c0e6e00",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "test",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

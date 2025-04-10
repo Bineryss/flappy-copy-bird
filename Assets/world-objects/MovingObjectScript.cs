@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MovingObjectScript : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5;
     [SerializeField] private float deadZoneOffset = 5;
     private float deadZone;
     private bool freez;
@@ -21,7 +20,7 @@ public class MovingObjectScript : MonoBehaviour
     void Update()
     {
         if (freez) return;
-        transform.position = transform.position + Vector3.left * moveSpeed * Time.deltaTime;
+        transform.position = transform.position + Vector3.left * GameManager.instance.getCurrentSpeed() * Time.deltaTime;
 
         if (transform.position.x < deadZone)
         {

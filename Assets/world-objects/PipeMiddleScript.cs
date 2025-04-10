@@ -2,17 +2,11 @@ using UnityEngine;
 
 public class PipeMiddleScript : MonoBehaviour
 {
-    private LogicScript logic;
+    private GameManager logic;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicScript>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        logic = GameManager.instance;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

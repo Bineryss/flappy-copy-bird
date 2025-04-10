@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private bool dead;
     public void onFlap(InputAction.CallbackContext context)
     {
+        if (!context.started) return;
         if (dead)
         {
             return;

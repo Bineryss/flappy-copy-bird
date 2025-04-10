@@ -23,13 +23,13 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicate instances
         }
-        UI.updateCollectedEggs();
+        EggCollected.trigger();
     }
 
     public void AddEgg()
     {
         eggsCollected++;
-        UI.updateCollectedEggs();
+        EggCollected.trigger();
         Debug.Log("Eggs Collected: " + eggsCollected);
     }
 

@@ -47,6 +47,6 @@ MonoBehaviour:
   pipe: {fileID: 1567069296083656530, guid: 21978116b5131a841b2aec7f209bc028, type: 3}
   egg: {fileID: 3236586697651331063, guid: 4dbcb230430d9844aaf2c8bed3c2c8f3, type: 3}
   eggOffset: 10
-  eggSpawnChance: 1
-  spawnRate: 4
+  eggSpawnChance: 0.2
+  spawnRate: 20
   heightOffset: 8

@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 public class GameOverScreenScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject gameOverScreenPrefab;
-    [SerializeField]
-    private LogicScript logicScript;
+    [SerializeField] private GameObject gameOverScreenPrefab;
+    [SerializeField] private LogicScript logicScript;
     void Start()
     {
         GameOver.on += handleGameOver;
+        logicScript = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicScript>();
     }
+
     void OnDestroy()
     {
         GameOver.on -= handleGameOver;

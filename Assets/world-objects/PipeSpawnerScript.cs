@@ -6,7 +6,7 @@ public class PipeSpawnerScript : MonoBehaviour
     [SerializeField] private GameObject egg;
     [SerializeField] private float eggOffset = 5;
     [SerializeField] private float eggSpawnChance = 0.2f;
-    public float spawnRate = 2;
+    [SerializeField] private float spawnRate = 2;
     private float timer = 0;
     public float heightOffset = 10;
     private bool gameOver;
@@ -21,7 +21,7 @@ public class PipeSpawnerScript : MonoBehaviour
     void Update()
     {
         if (gameOver) return;
-        if (timer < spawnRate)
+        if (timer < spawnRate / GameManager.instance.getCurrentSpeed())
         {
             timer += Time.deltaTime;
         }
