@@ -2,11 +2,10 @@ using System;
 public class UI
 {
 
-    public delegate void OnEggsCollectedChanged(int newEggCount);
-    public static event OnEggsCollectedChanged EggsCollectedChanged;
+    public static event Action onEggsCollectedChanged;
 
-    public static void updateCollectedEggs(int count)
+    public static void updateCollectedEggs()
     {
-        EggsCollectedChanged?.Invoke(count);
+        onEggsCollectedChanged?.Invoke();
     }
 }

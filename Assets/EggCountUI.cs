@@ -6,16 +6,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text eggsCollectedText;
     private void Start()
     {
-        UI.EggsCollectedChanged += UpdateEggsUI;
+        UI.onEggsCollectedChanged += UpdateEggsUI;
+        UpdateEggsUI();
     }
 
     private void OnDestroy()
     {
-        UI.EggsCollectedChanged -= UpdateEggsUI;
+        UI.onEggsCollectedChanged -= UpdateEggsUI;
     }
 
-    private void UpdateEggsUI(int newEggCount)
+    private void UpdateEggsUI()
     {
-        eggsCollectedText.text = newEggCount.ToString();
+        eggsCollectedText.text = InventoryManager.instance.eggsCollected.ToString();
     }
 }

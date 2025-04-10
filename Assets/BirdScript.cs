@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BirdScript : MonoBehaviour
 {
@@ -23,8 +24,7 @@ public class BirdScript : MonoBehaviour
         GameOver.on -= handleGameOver;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void onFlap(InputAction.CallbackContext context)
     {
         if (dead)
         {
