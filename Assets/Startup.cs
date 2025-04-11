@@ -10,14 +10,8 @@ public class Startup : MonoBehaviour
     void Start()
     {
         float cameraRightBorder = mainCamera.orthographicSize * mainCamera.aspect;
-        Instantiate(ui);
         Instantiate(player);
         Instantiate(pipeSpawner, new Vector3(cameraRightBorder + 5, 0, 0), pipeSpawner.transform.rotation);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Instantiate(ui);
     }
 }
