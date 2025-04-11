@@ -16,16 +16,6 @@ public class PlayerMovement : MonoBehaviour
         playerBody.linearVelocity = Vector2.up * flapStrength;
     }
 
-    void Start()
-    {
-        GameOver.on += handleGameOver;
-
-    }
-    void OnDestroy()
-    {
-        GameOver.on -= handleGameOver;
-    }
-
     public void handleGameOver()
     {
         dead = true;

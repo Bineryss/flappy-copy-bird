@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 736355969786259596}
   - component: {fileID: 4676518571150080979}
   - component: {fileID: 3487613000063725123}
+  - component: {fileID: 5520850055674606810}
+  - component: {fileID: -7963689623103646791}
+  - component: {fileID: -720524119356484395}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -66,3 +69,88 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameModeUI: {fileID: 9197481963319205126, guid: 7d6ec0d6dcc392c4d83d93bc4aaf853a, type: 3}
   gameOverUI: {fileID: 9197481963319205126, guid: b05ed3197e9a104439180e27bd1df729, type: 3}
+  gameOverScreenDelay: 1
+--- !u!114 &5520850055674606810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809345362321346962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9ef286665a556c14e85825c1dcf557b4, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3487613000063725123}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: handleGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-7963689623103646791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809345362321346962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 29e3e5c5dda1b644c9c3052fc08f1d5c, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3487613000063725123}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-720524119356484395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809345362321346962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6a32785df176a074e8a7918d87c6fe4f, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3487613000063725123}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: UpdateEggs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

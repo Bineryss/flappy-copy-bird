@@ -9,35 +9,23 @@ public class GameUI : MonoBehaviour
     private Label eggCountLabel;
     [SerializeField] private VisualTreeAsset gameModeUI;
     [SerializeField] private VisualTreeAsset gameOverUI;
+    [SerializeField] private float gameOverScreenDelay;
     private void Awake()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
-        EggCollected.on += UpdateEggs;
-        ScoreIncreased.on += UpdateScore;
-        GameOver.on += handleGameOver;
     }
 
-    private void OnDestroy()
-    {
-        EggCollected.on -= UpdateEggs;
-        ScoreIncreased.on -= UpdateScore;
-        GameOver.on -= handleGameOver;
-    }
     private void OnEnable()
     {
         SwitchToGameMode();
     }
-    private void UpdateEggs()
+    public void UpdateEggs()
     {
         eggCountLabel.text = InventoryManager.instance.eggsCollected.ToString();
     }
-    private void UpdateScore()
+    public void UpdateScore()
     {
         scoreLabel.text = GameManager.instance.score.ToString();
-    }
-    private void handleGameOver()
-    {
-        SwitchToGameOverMode();
     }
 
     public void SwitchToGameMode()
@@ -49,7 +37,11 @@ public class GameUI : MonoBehaviour
         UpdateEggs();
     }
 
-    public void SwitchToGameOverMode()
+    public void handleGameOver()
+    {
+        Invoke(nameof(SwitchToGameOverMode), gameOverScreenDelay);
+    }
+    private void SwitchToGameOverMode()
     {
         // Clear existing UI and load Game Over Mode UI
         root.Clear();

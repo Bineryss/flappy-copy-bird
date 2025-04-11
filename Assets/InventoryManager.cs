@@ -30,6 +30,7 @@ public class InventoryManager : MonoBehaviour
     {
         eggsCollected++;
         EggCollected.trigger();
+        SaveGame();
         Debug.Log("Eggs Collected: " + eggsCollected);
     }
 

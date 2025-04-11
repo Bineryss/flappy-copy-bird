@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5316107334151491724, guid: ad0ceb569ca6bc3459291b3512fa7800, type: 3}
+      propertyPath: orthographic size
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6204531644690278568, guid: ad0ceb569ca6bc3459291b3512fa7800, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -207,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3108424159454191032, guid: b824a822fe57a2a49b96870172cdca67, type: 3}
   pipeSpawner: {fileID: 2144954854270491746, guid: 3c9f2f12b845f514c85709e5f10d08f8, type: 3}
+  objectSpawnerOffset: 5
   mainCamera: {fileID: 5316107334151491724, guid: ad0ceb569ca6bc3459291b3512fa7800, type: 3}
   ui: {fileID: 5809345362321346962, guid: e102ce6b3cfc8dc4fba1dfd178dbbc5e, type: 3}
 --- !u!4 &247973830
@@ -218,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 247973828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.851933, y: 5.89735, z: -0.42737764}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 337807322}
   - component: {fileID: 337807321}
+  - component: {fileID: 337807323}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -262,12 +268,40 @@ Transform:
   m_GameObject: {fileID: 337807320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.522059, y: 2.6534588, z: 0.22730938}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &337807323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337807320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6a32785df176a074e8a7918d87c6fe4f, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 337807321}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: AddEgg
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!20 &460690262 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5316107334151491724, guid: ad0ceb569ca6bc3459291b3512fa7800, type: 3}
@@ -364,6 +398,7 @@ GameObject:
   - component: {fileID: 1957335985}
   - component: {fileID: 1957335989}
   - component: {fileID: 1957335988}
+  - component: {fileID: 1957335990}
   m_Layer: 0
   m_Name: LogicManager
   m_TagString: logic
@@ -385,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathBoundary: {fileID: 1957335988}
   mainCamera: {fileID: 460690262}
+  onGameOver: {fileID: 11400000, guid: 9ef286665a556c14e85825c1dcf557b4, type: 2}
 --- !u!4 &1957335986
 Transform:
   m_ObjectHideFlags: 0
@@ -458,8 +494,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a29d17783f3ee48ae54c6f58d18292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 5
+  baseSpeed: 7
   speedMultiplyer: 0.5
+--- !u!114 &1957335990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957335984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 29e3e5c5dda1b644c9c3052fc08f1d5c, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1957335989}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: addScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

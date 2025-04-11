@@ -2,16 +2,11 @@ using UnityEngine;
 
 public class PipeMiddleScript : MonoBehaviour
 {
-    private GameManager logic;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        logic = GameManager.instance;
-    }
+    [SerializeField] private GameEvent onScoreIncreased;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer != 3) return;
-        logic.addScore(1);
+        onScoreIncreased.triggerEvent();
     }
 }

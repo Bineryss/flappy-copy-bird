@@ -13,7 +13,6 @@ public class PipeSpawnerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameOver.on += handleGameOver;
         spawnPipe();
     }
 
@@ -32,18 +31,13 @@ public class PipeSpawnerScript : MonoBehaviour
             timer = 0;
         }
     }
-    void OnDestroy()
-    {
-        GameOver.on -= handleGameOver;
-    }
-
     void spawnPipe()
     {
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
     }
-    private void handleGameOver()
+    public void handleGameOver()
     {
         gameOver = true;
     }

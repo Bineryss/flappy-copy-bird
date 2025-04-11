@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4655412800926129122}
   - component: {fileID: 4395203275713900222}
   - component: {fileID: 3910324047172571937}
+  - component: {fileID: -5382592856345350690}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -138,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7befc3d44cca22d4ca4d1be700523456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollect: {fileID: 11400000, guid: 6a32785df176a074e8a7918d87c6fe4f, type: 2}
 --- !u!114 &3910324047172571937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,5 +152,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ad9070c113b841a4af60ff3ab5e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   deadZoneOffset: 5
+--- !u!114 &-5382592856345350690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236586697651331063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9ef286665a556c14e85825c1dcf557b4, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3910324047172571937}
+        m_TargetAssemblyTypeName: MovingObjectScript, Assembly-CSharp
+        m_MethodName: handleGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -3,6 +3,7 @@ public class LogicScript : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D deathBoundary;
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private GameEvent onGameOver;
 
 
     void Start()
@@ -18,7 +19,7 @@ public class LogicScript : MonoBehaviour
         if (collision.tag == "player")
         {
             Debug.Log("Player collision detected");
-            GameOver.trigger();
+            onGameOver.triggerEvent();
         }
     }
 }

@@ -8,12 +8,7 @@ public class MovingObjectScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameOver.on += handleGameOver;
         deadZone = (Camera.main.orthographicSize * Camera.main.aspect + deadZoneOffset) * -1;
-    }
-    void OnDestroy()
-    {
-        GameOver.on -= handleGameOver;
     }
 
     // Update is called once per frame
@@ -29,7 +24,7 @@ public class MovingObjectScript : MonoBehaviour
         }
     }
 
-    private void handleGameOver()
+    public void handleGameOver()
     {
         freez = true;
     }

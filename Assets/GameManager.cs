@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour
     public void addScore(int amount = 1)
     {
         score += amount;
-        ScoreIncreased.trigger();
     }
 
 }

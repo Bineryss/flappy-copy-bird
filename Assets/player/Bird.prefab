@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -9052358859445618004}
   - component: {fileID: 4121834066251932008}
   - component: {fileID: 4725094008007713746}
+  - component: {fileID: -8148402952959695793}
   m_Layer: 3
   m_Name: Bird
   m_TagString: player
@@ -184,6 +185,7 @@ MonoBehaviour:
   birdBody: {fileID: 6890365085857651852}
   birdBox: {fileID: 3150513815989058622}
   torqueAmount: 25
+  onPlayerDeath: {fileID: 11400000, guid: 9ef286665a556c14e85825c1dcf557b4, type: 2}
 --- !u!114 &4725094008007713746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,12 +227,36 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0c948128-946c-4756-ab8e-f93e0f340c71
     m_ActionName: 'PlayerControls/flap[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 066c54b3-4b5c-4c78-9148-93de947e415d
-    m_ActionName: PlayerControls/test
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-8148402952959695793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3108424159454191032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc890c5d66ee334181c4e4e36b4793f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9ef286665a556c14e85825c1dcf557b4, type: 2}
+  onEventTriggerd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4121834066251932008}
+        m_TargetAssemblyTypeName: PlayerDeath, Assembly-CSharp
+        m_MethodName: handleGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
