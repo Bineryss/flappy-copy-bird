@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: initial; flex-direction: column;">
+        <ui:VisualElement style="flex-grow: initial; flex-direction: row;">
+            <ui:Button text="&lt; Zurück" name="back" style="width: auto;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: initial; flex-direction: row;">
+            <ui:Button name="level-0" style="flex-grow: 1;">
+                <ui:VisualElement style="flex-grow: initial;">
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:Label text="World 1" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+                        <ui:VisualElement style="flex-grow: 1;">
+                            <ui:Label text="Difficulty" />
+                            <ui:Label text="0" name="speed-display" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1;">
+                            <ui:Label text="Egg Chance" />
+                            <ui:Label text="0" name="speed-display" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:Button name="level-1" style="flex-grow: 1;">
+                <ui:VisualElement style="flex-grow: initial;">
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:Label text="World 2" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+                        <ui:VisualElement style="flex-grow: 1;">
+                            <ui:Label text="Difficulty" />
+                            <ui:Label text="0" name="speed-display" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1;">
+                            <ui:Label text="Egg Chance" />
+                            <ui:Label text="0" name="speed-display" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

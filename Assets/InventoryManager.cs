@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 
     private int score; // Runtime score (doesn't need to persist)
     [SerializeField] public int eggsCollected { get; private set; }
+    [SerializeField] private GameEvent onEggCollected;
 
     private string savePath;
 
@@ -23,13 +24,13 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicate instances
         }
-        EggCollected.trigger();
+        onEggCollected.triggerEvent();
     }
 
     public void AddEgg()
     {
         eggsCollected++;
-        EggCollected.trigger();
+        onEggCollected.triggerEvent();
         SaveGame();
         Debug.Log("Eggs Collected: " + eggsCollected);
     }

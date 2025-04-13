@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/core.uss?fileID=7433441132597879392&amp;guid=a619128b89314734498c173995ec5af9&amp;type=3#core" />
+    <ui:VisualElement class="container-button" style="flex-grow: initial; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); min-width: 500px;">
+        <ui:Label text="_world-name" name="world-name" class="text-l" style="background-image: url(&quot;project://database/Assets/Violet%20Theme%20Ui/Sliders/Fill%20Red.png?fileID=2800000&amp;guid=89aff9e18247bb647979c8e71d9dc5c7&amp;type=3#Fill Red&quot;); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 16px; padding-right: 32px; padding-bottom: 16px; padding-left: 32px; -unity-text-align: upper-center;" />
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Violet%20Theme%20Ui/Sliders/Fill%20Violet.png?fileID=-7637187599078947798&amp;guid=d0b5022270fc8a0409266ba1be38188b&amp;type=3#Fill Violet_0&quot;); padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px; align-items: stretch;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(73, 0, 149); background-image: url(&quot;project://database/Assets/Violet%20Theme%20Ui/Buttons/Misc/Menu%20Background.png?fileID=2800000&amp;guid=f0b4dc9b8fe390b4597ba9c379657d44&amp;type=3#Menu Background&quot;); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; padding-top: 16px; padding-right: 32px; padding-bottom: 16px; padding-left: 32px; align-items: stretch;">
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:Label text="Difficulty" class="text-m" style="-unity-text-align: upper-center;" />
+                    <ui:VisualElement name="difficulty" style="flex-grow: 1; flex-direction: row; justify-content: center; margin-top: 16px; margin-bottom: 16px;">
+                        <ui:VisualElement name="VisualElement" class="icon-m star-dark" />
+                        <ui:VisualElement name="VisualElement" class="icon-m star-dark" />
+                        <ui:VisualElement name="VisualElement" class="icon-m star-dark" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:Label text="Reward" class="text-m" style="-unity-text-align: upper-center;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center; margin-top: 16px; margin-bottom: 16px;">
+                        <ui:VisualElement name="reward" class="icon-m" style="flex-grow: initial; background-image: url(&quot;project://database/Assets/Violet%20Theme%20Ui/Colored%20Icons/Gem%202%20Blue.png?fileID=7550001675942822110&amp;guid=e5b82729baeb4b542bc3b0dbde0a1791&amp;type=3#Gem 2 Blue_0&quot;); margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left: 0; -unity-background-scale-mode: scale-to-fit; background-size: contain;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Button text="PLAY" name="world_play" class="action-button" style="font-size: 32px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -65,7 +65,7 @@ public class GameUI : MonoBehaviour
     private void RestartGame()
     {
         Debug.Log("Restarting Game...");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameScene");
     }
 
     private void GoToMainMenu()
