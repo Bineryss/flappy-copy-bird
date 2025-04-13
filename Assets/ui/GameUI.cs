@@ -10,6 +10,8 @@ public class GameUI : MonoBehaviour
     [SerializeField] private VisualTreeAsset gameModeUI;
     [SerializeField] private VisualTreeAsset gameOverUI;
     [SerializeField] private float gameOverScreenDelay;
+    [SerializeField] private StringEvent onSceneChange;
+    [SerializeField] private SceneReference mainMenu;
     private void Awake()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
@@ -65,12 +67,11 @@ public class GameUI : MonoBehaviour
     private void RestartGame()
     {
         Debug.Log("Restarting Game...");
-        SceneManager.LoadScene("GameScene");
+        onSceneChange.Raise("GameScene");
     }
 
     private void GoToMainMenu()
     {
-        Debug.Log("Going to Main Menu...");
-        // Add logic to go back to the main menu
+        onSceneChange.Raise(mainMenu.SceneName);
     }
 }

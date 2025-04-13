@@ -7,6 +7,7 @@ public class CreateLevelScreen : MonoBehaviour
     private VisualElement root;
     [SerializeField] private VisualTreeAsset levelItemTemplate;
     [SerializeField] private List<LevelData> levels = new List<LevelData>();
+    [SerializeField] private StringEvent onSceneChange;
     void OnEnable()
     {
         root = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("world-selection");
@@ -24,6 +25,7 @@ public class CreateLevelScreen : MonoBehaviour
         VisualElement difficultyContainer = item.Q<VisualElement>("difficulty");
         List<VisualElement> starElements = difficultyContainer.Query<VisualElement>(className: "star-dark").ToList();
         changeStars(starElements, levelData.GetDifficulty());
+        item.Q<Button>().clicked += () => onSceneChange.Raise(levelData.GetSceneName());
         return item;
     }
 

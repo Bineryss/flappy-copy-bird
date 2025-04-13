@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57928d70eb46854e8f7067e0e743549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoad: {fileID: 11400000, guid: b8555eb8ebb8f3141bf9a32782c4365a, type: 2}
 --- !u!114 &1666316296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +231,7 @@ MonoBehaviour:
   levelItemTemplate: {fileID: 9197481963319205126, guid: 4321eb00420046f48b506ea5dfb90d90, type: 3}
   levels:
   - {fileID: 11400000, guid: 79e677a9da5798f4888e7c285b6a79a0, type: 2}
+  onSceneChange: {fileID: 11400000, guid: b8555eb8ebb8f3141bf9a32782c4365a, type: 2}
 --- !u!1001 &1932357416
 PrefabInstance:
   m_ObjectHideFlags: 0

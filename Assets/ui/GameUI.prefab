@@ -70,6 +70,9 @@ MonoBehaviour:
   gameModeUI: {fileID: 9197481963319205126, guid: 7d6ec0d6dcc392c4d83d93bc4aaf853a, type: 3}
   gameOverUI: {fileID: 9197481963319205126, guid: b05ed3197e9a104439180e27bd1df729, type: 3}
   gameOverScreenDelay: 1
+  onSceneChange: {fileID: 11400000, guid: b8555eb8ebb8f3141bf9a32782c4365a, type: 2}
+  mainMenu:
+    sceneAsset: {fileID: 102900000, guid: e5393540da84eb245819be15ac9b7bbd, type: 3}
 --- !u!114 &5520850055674606810
 MonoBehaviour:
   m_ObjectHideFlags: 0

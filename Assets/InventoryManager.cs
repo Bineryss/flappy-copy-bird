@@ -16,7 +16,6 @@ public class InventoryManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Persist this object across scenes
             savePath = Application.persistentDataPath + "/save-data.json";
             LoadGame(); // Load data when the game starts
         }
@@ -24,13 +23,11 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicate instances
         }
-        onEggCollected.triggerEvent();
     }
 
     public void AddEgg()
     {
         eggsCollected++;
-        onEggCollected.triggerEvent();
         SaveGame();
         Debug.Log("Eggs Collected: " + eggsCollected);
     }

@@ -8,6 +8,7 @@ public class MainMenuUI : MonoBehaviour
     private VisualElement startScreen;
     private VisualElement levelScreen;
     private Button backButton;
+    [SerializeField] StringEvent sceneLoad;
 
     private void Awake()
     {
@@ -21,12 +22,12 @@ public class MainMenuUI : MonoBehaviour
         playButton.clicked += handelStart;
         Button levelSelection = root.Q<Button>("level-select");
         levelSelection.clicked += handelLevelScreen;
-        root.Q<Button>("world_play").clicked += handelStart;
+        root.Q<Label>("collectedItemsCount").text = InventoryManager.instance.eggsCollected.ToString();
     }
 
     private void handelStart()
     {
-        SceneManager.LoadScene("GameScene");
+        sceneLoad.Raise("GameScene");
     }
 
 

@@ -7,7 +7,7 @@ public class Startup : MonoBehaviour
     [SerializeField] private int objectSpawnerOffset = 5;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject ui;
-    void Start()
+    void Awake()
     {
         Instantiate(player);
         Instantiate(ui);

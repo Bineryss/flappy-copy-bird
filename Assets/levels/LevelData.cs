@@ -10,6 +10,7 @@ public class LevelData : ScriptableObject
     [SerializeField] private float speedMultiplyer;
     [SerializeField] private float pipeSpawnRate;
     [SerializeField] private float eggSpawnRate;
+    [SerializeField] private SceneReference scene;
 
     public string GetLevelName()
     {
@@ -39,6 +40,11 @@ public class LevelData : ScriptableObject
     public float GetEggSpawnRate()
     {
         return eggSpawnRate;
+    }
+
+    public string GetSceneName()
+    {
+        return scene.SceneName;
     }
 }
 
