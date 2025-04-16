@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdBody: {fileID: 6890365085857651852}
   birdBox: {fileID: 3150513815989058622}
-  torqueAmount: 25
+  torqueAmount: 5
   onPlayerDeath: {fileID: 11400000, guid: 9ef286665a556c14e85825c1dcf557b4, type: 2}
 --- !u!114 &4725094008007713746
 MonoBehaviour:
